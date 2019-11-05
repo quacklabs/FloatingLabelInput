@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "FLoatingLabelInput"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of FLoatingLabelInput."
+  spec.summary      = "A UITextField subclass that creates a floating label from the placeholder text."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+                A beautiful implementation of the floating label input style. It also includes an optional view/hide input text button for password fields
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/FLoatingLabelInput"
+  spec.homepage     = "https://github.com/quacklabs/FloatingLabelInput"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT "
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -55,7 +56,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "Mark Boleigha" => "donhoenix@gmail.com" }
   # Or just: spec.author    = "Mark Boleigha"
   # spec.authors            = { "Mark Boleigha" => "donhoenix@gmail.com" }
-  # spec.social_media_url   = "https://twitter.com/Mark Boleigha"
+  spec.social_media_url   = "https://twitter.com/MarkBoleigha"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/FLoatingLabelInput.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/quacklabs/FloatingLabelInput.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +91,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "Source", "Source/**/*.swift"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
