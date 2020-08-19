@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FloatingLabelInput"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "A UITextField subclass that creates a floating label from the placeholder text."
 
   # This description is used to generate tags and improve search results.
