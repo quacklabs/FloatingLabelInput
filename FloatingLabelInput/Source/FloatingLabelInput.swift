@@ -8,11 +8,15 @@
 
 import UIKit
 
+@IBDesignable
 open class FloatingLabelInput: UITextField {
     var floatingLabel: UILabel!// = UILabel(frame: CGRect.zero)
     var floatingLabelHeight: CGFloat = 14
     var button = UIButton(type: .custom)
     var imageView = UIImageView(frame: CGRect.zero)
+    
+    var activeConstraint: NSLayoutConstraint?
+    var inactiveConstraint: NSLayoutConstraint?
     
     @IBInspectable
     var _placeholder: String?
@@ -54,9 +58,15 @@ open class FloatingLabelInput: UITextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self._setup()
+    }
+    
+    func _setup() {
         self._placeholder = (self._placeholder != nil) ? self._placeholder : placeholder
         placeholder = self._placeholder // Make sure the placeholder is shown
         self.floatingLabel = UILabel(frame: CGRect.zero)
+        self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.floatingLabel.clipsToBounds = false
         self.addTarget(self, action: #selector(self.addFloatingLabel), for: .editingDidBegin)
         self.addTarget(self, action: #selector(self.removeFloatingLabel), for: .editingDidEnd)
     }
@@ -68,18 +78,19 @@ open class FloatingLabelInput: UITextField {
             self.floatingLabel.font = floatingLabelFont
             self.floatingLabel.text = self._placeholder
             self.floatingLabel.layer.backgroundColor = UIColor.white.cgColor
-            self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
-            self.floatingLabel.clipsToBounds = true
-            self.floatingLabel.frame = CGRect(x: 0, y: 0, width: floatingLabel.frame.width+4, height: floatingLabel.frame.height+2)
             self.floatingLabel.textAlignment = .center
+            self.floatingLabel.sizeToFit()
+            
             self.addSubview(self.floatingLabel)
             self.layer.borderColor = self.activeBorderColor.cgColor
+            self.activeConstraint = self.floatingLabel.centerYAnchor.constraint(equalTo: self.topAnchor)
+            NSLayoutConstraint.activate([
+                self.activeConstraint!,
+                self.floatingLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10)
+            ])
             
-            self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -10).isActive = true // Place our label 10 pts above the text field
             self.placeholder = ""
         }
-        // Floating label may be stuck behind text input. we bring it forward as it was the last item added to the view heirachy
-        self.bringSubviewToFront(subviews.last!)
         self.setNeedsDisplay()
     }
     
