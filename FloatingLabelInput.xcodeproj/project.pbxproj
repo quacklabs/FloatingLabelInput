@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		256462A924ED94CA009B8329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256462A824ED94CA009B8329 /* AppDelegate.swift */; };
+		256462AB24ED94CA009B8329 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256462AA24ED94CA009B8329 /* SceneDelegate.swift */; };
+		256462AD24ED94CA009B8329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256462AC24ED94CA009B8329 /* ViewController.swift */; };
+		256462B024ED94CA009B8329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256462AE24ED94CA009B8329 /* Main.storyboard */; };
+		256462B224ED94D1009B8329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256462B124ED94D1009B8329 /* Assets.xcassets */; };
+		256462B524ED94D1009B8329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256462B324ED94D1009B8329 /* LaunchScreen.storyboard */; };
+		256462BA24ED94F2009B8329 /* FloatingLabelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258CD315237177A200CAFC80 /* FloatingLabelInput.swift */; };
 		258CD30E2371752600CAFC80 /* FloatingLabelInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 258CD30C2371752600CAFC80 /* FloatingLabelInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		258CD316237177A200CAFC80 /* FloatingLabelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258CD315237177A200CAFC80 /* FloatingLabelInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		256462A624ED94CA009B8329 /* FloatingLabelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingLabelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		256462A824ED94CA009B8329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		256462AA24ED94CA009B8329 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		256462AC24ED94CA009B8329 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		256462AF24ED94CA009B8329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		256462B124ED94D1009B8329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		256462B424ED94D1009B8329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		256462B624ED94D1009B8329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		258CD3092371752600CAFC80 /* FloatingLabelInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FloatingLabelInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		258CD30C2371752600CAFC80 /* FloatingLabelInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingLabelInput.h; sourceTree = "<group>"; };
 		258CD30D2371752600CAFC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +34,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		256462A324ED94C9009B8329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		258CD3062371752600CAFC80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +51,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		256462A724ED94CA009B8329 /* FloatingLabelExample */ = {
+			isa = PBXGroup;
+			children = (
+				256462A824ED94CA009B8329 /* AppDelegate.swift */,
+				256462AA24ED94CA009B8329 /* SceneDelegate.swift */,
+				256462AC24ED94CA009B8329 /* ViewController.swift */,
+				256462AE24ED94CA009B8329 /* Main.storyboard */,
+				256462B124ED94D1009B8329 /* Assets.xcassets */,
+				256462B324ED94D1009B8329 /* LaunchScreen.storyboard */,
+				256462B624ED94D1009B8329 /* Info.plist */,
+			);
+			path = FloatingLabelExample;
+			sourceTree = "<group>";
+		};
 		258CD2FF2371752600CAFC80 = {
 			isa = PBXGroup;
 			children = (
 				258CD30B2371752600CAFC80 /* FloatingLabelInput */,
+				256462A724ED94CA009B8329 /* FloatingLabelExample */,
 				258CD30A2371752600CAFC80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				258CD3092371752600CAFC80 /* FloatingLabelInput.framework */,
+				256462A624ED94CA009B8329 /* FloatingLabelExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +115,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		256462A524ED94C9009B8329 /* FloatingLabelExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 256462B924ED94D1009B8329 /* Build configuration list for PBXNativeTarget "FloatingLabelExample" */;
+			buildPhases = (
+				256462A224ED94C9009B8329 /* Sources */,
+				256462A324ED94C9009B8329 /* Frameworks */,
+				256462A424ED94C9009B8329 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingLabelExample;
+			productName = FloatingLabelExample;
+			productReference = 256462A624ED94CA009B8329 /* FloatingLabelExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		258CD3082371752600CAFC80 /* FloatingLabelInput */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 258CD3112371752600CAFC80 /* Build configuration list for PBXNativeTarget "FloatingLabelInput" */;
@@ -101,9 +156,13 @@
 		258CD3002371752600CAFC80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Sprinthub Mobile";
 				TargetAttributes = {
+					256462A524ED94C9009B8329 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					258CD3082371752600CAFC80 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
@@ -116,6 +175,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 258CD2FF2371752600CAFC80;
 			productRefGroup = 258CD30A2371752600CAFC80 /* Products */;
@@ -123,11 +183,22 @@
 			projectRoot = "";
 			targets = (
 				258CD3082371752600CAFC80 /* FloatingLabelInput */,
+				256462A524ED94C9009B8329 /* FloatingLabelExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		256462A424ED94C9009B8329 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				256462B524ED94D1009B8329 /* LaunchScreen.storyboard in Resources */,
+				256462B224ED94D1009B8329 /* Assets.xcassets in Resources */,
+				256462B024ED94CA009B8329 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		258CD3072371752600CAFC80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +209,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		256462A224ED94C9009B8329 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				256462AD24ED94CA009B8329 /* ViewController.swift in Sources */,
+				256462A924ED94CA009B8329 /* AppDelegate.swift in Sources */,
+				256462AB24ED94CA009B8329 /* SceneDelegate.swift in Sources */,
+				256462BA24ED94F2009B8329 /* FloatingLabelInput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		258CD3052371752600CAFC80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,7 +230,64 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		256462AE24ED94CA009B8329 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				256462AF24ED94CA009B8329 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		256462B324ED94D1009B8329 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				256462B424ED94D1009B8329 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		256462B724ED94D1009B8329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22FN4D2YAD;
+				INFOPLIST_FILE = FloatingLabelExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.markboleigha.FloatingLabelExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		256462B824ED94D1009B8329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22FN4D2YAD;
+				INFOPLIST_FILE = FloatingLabelExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.markboleigha.FloatingLabelExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		258CD30F2371752600CAFC80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +466,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		256462B924ED94D1009B8329 /* Build configuration list for PBXNativeTarget "FloatingLabelExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				256462B724ED94D1009B8329 /* Debug */,
+				256462B824ED94D1009B8329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		258CD3032371752600CAFC80 /* Build configuration list for PBXProject "FloatingLabelInput" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

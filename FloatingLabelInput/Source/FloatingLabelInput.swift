@@ -15,7 +15,8 @@ open class FloatingLabelInput: UITextField {
     var button = UIButton(type: .custom)
     var imageView = UIImageView(frame: CGRect.zero)
     
-    var activeConstraint: NSLayoutConstraint?
+    @IBInspectable
+    public var activeConstraint: NSLayoutConstraint?
     var inactiveConstraint: NSLayoutConstraint?
     
     @IBInspectable
@@ -83,11 +84,12 @@ open class FloatingLabelInput: UITextField {
             
             self.addSubview(self.floatingLabel)
             self.layer.borderColor = self.activeBorderColor.cgColor
-            self.activeConstraint = self.floatingLabel.centerYAnchor.constraint(equalTo: self.topAnchor)
+            self.activeConstraint = self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor)
             NSLayoutConstraint.activate([
                 self.activeConstraint!,
                 self.floatingLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10)
             ])
+            self.activeConstraint?.constant = 5
             
             self.placeholder = ""
         }
